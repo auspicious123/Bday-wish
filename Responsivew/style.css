@@ -1,0 +1,115 @@
+@import url('http://fonts.cdnfonts.com/css/kingthings-bloone');
+body{
+    margin:0;
+    padding:0;
+    background: #06031d;
+}
+html{
+    font-size:62.5%;
+    
+}
+.bday{
+margin-top:8.0rem;
+text-align:center;
+background:linear-gradient(180deg,#f80112 0%,#2602f5 110%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+cursor:pointer;
+font-size:8.0rem;
+font-family: 'Kingthings Bloone!', sans-serif;
+}
+.name{
+padding-right:10.0rem;
+padding-left:10.0rem;
+margin-left:20.0rem;
+    margin-top:6.0rem;
+    text-align:center;
+    background:linear-gradient(180deg,#f80112,#2602f5 110%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    cursor:pointer;
+    font-size:8.0rem;
+    font-family: 'Kingthings Bloone!', sans-serif;
+    display:inline-block;
+}
+.name:hover{
+    -webkit-box-reflect:below -.8rem -webkit-gradient(linear,right top,right bottom,from(transparent),color-stop(85%,transparent),to(rgba(42,99,99,1)));
+}
+.wrapper{
+    position:relative;
+    width:32.0rem;
+    margin:15.0rem auto;
+    perspective:100.0rem;
+    margin-bottom:50.0rem;
+}
+.img-area{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    transform-style:preserve-3d;
+    transform:rotateY(-360deg) translateZ(-30.0rem);
+    animation:animate 25s steps(1000,end) infinite;
+}
+.single-img{
+    position: absolute;
+    width:30.0rem;
+    height:20.0rem;
+    top:1.0rem;
+    left:1.0rem;
+}
+.single-img img{
+    width:30.0rem;
+    height:20.0rem;
+    border:.5rem solid #fff;
+}
+.single-img.img-one{
+    transform: rotateY(0deg) translateZ(30.0rem);
+}
+.single-img.img-two{
+    transform: rotateY(60deg) translateZ(30.0rem);
+}
+.single-img.img-three{
+        transform: rotateY(120deg) translateZ(30.0rem);
+}
+.single-img.img-four{
+        transform: rotateY(180deg) translateZ(30.0rem);
+}
+.single-img.img-five{
+        transform: rotateY(240deg) translateZ(30.0rem);
+}
+.single-img.img-six{
+        transform: rotateY(300deg) translateZ(30.0rem);
+}
+img{
+    filter:grayscale(90%);
+    transition: 1s;
+    cursor:pointer;
+}
+img:hover{
+    transition:1s;
+    filter:grayscale(0);
+}
+@keyframes animate{
+from{
+transform:rotateY(-360deg);
+}
+to{
+    transform: rotateY(0deg);
+}
+}
+@font-face{
+    font-family: 'Kingthings Bloone!', sans-serif;
+    src:url(bday.ttf);
+}
+
+/*header responsive code*/
+@media(max-width:998px){
+    html{
+        font-size:55%;
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size:45%;
+    }
+}
